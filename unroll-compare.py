@@ -32,6 +32,9 @@ def main():
 
         for h, row in zip(headers, r):
             for h2, col in zip(headers, row):
+                if h == h2:
+                    continue
+
                 col = float(col)
                 if col > 0.0:
                     k = tuple(sorted([h, h2]))
