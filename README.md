@@ -17,3 +17,11 @@ CP000561.1,CP000561.1,1.0,1.0
 AE006470.1,NZ_KQ961402.1,0.0002304147465437788,0.0004610419548178884
 CP000660.1,CP000660.1,1.0,1.0
 ```
+
+## some useful commands
+
+```
+grep -i s__Shewanella gtdb-rs202.taxonomy.v2.csv > shewanella.csv
+# then add headers, and...
+sourmash sig extract --picklist shewanella.csv:ident:ident /group/ctbrowngrp/gtdb/databases/ctb/gtdb-rs202.genomic.k31.zip -o shewanella.zip
+```
